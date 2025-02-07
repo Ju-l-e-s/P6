@@ -1,0 +1,93 @@
+/* Overlay Styling */
+.overlay-hover {
+    transition: opacity 0.3s ease-in-out; /* Animation au survol */
+}
+
+/* Button Styling */
+.btn-dynamic {
+    background-color: rgba(118, 118, 118, 0.98); /* Couleur personnalisée */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    padding: 6px 12px; /* Marges internes */
+    font-size: 14px; /* Taille de police */
+    line-height: 1; /* Centrage vertical */
+    text-align: center; /* Centrage horizontal du texte */
+}
+
+.btn-dynamic:hover {
+    scale: 1.1; /* Légère mise en avant au survol */
+    transition: scale 0.1s ease-in-out; /* Animation au survol */
+}
+
+/* Titre Styling */
+.title-custom {
+    font-size: 1.25rem; /* Taille de police */
+    font-weight: 600; /* Poids du texte */
+}
+
+/* Clickable Images */
+.clickable-image {
+    cursor: pointer; /* Change le curseur sur hover */
+}
+
+/* Hover Overlay Effect */
+.hover-overlay {
+    transition: opacity 0.3s ease-in-out; /* Animation pour l'effet hover */
+}
+
+/* Card Size */
+.card-size {
+    width: 100%; /* Prend la largeur disponible dans la colonne */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    max-width: 252px; /* Largeur maximale définie */
+}
+/*.movie-container {*/
+
+/*}*/
+/*!* Container Styling *!*/
+/*.movie-container {*/
+/*    display: grid;*/
+/*    gap: 0.5rem; !* Espacement entre les affiches *!*/
+/*    justify-content: center; !* Centrer les affiches horizontalement *!*/
+/*    align-items: center; !* Centrer les affiches verticalement *!*/
+/*}*/
+
+/*!* Grid Layout Configuration *!*/
+/*@media (min-width: 992px) { !* Desktop *!*/
+/*    .movie-container {*/
+/*        grid-template-columns: repeat(3, 1fr); !* 3 affiches par ligne *!*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 768px) and (max-width: 991px) { !* Tablette *!*/
+/*    .movie-container {*/
+/*        grid-template-columns: repeat(2, 1fr); !* 2 affiches par ligne *!*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 767px) { !* Mobile *!*/
+/*    header{*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*    }*/
+/*    header h1 {*/
+/*        display: none;*/
+/*    }*/
+/*    .movie-container {*/
+/*        grid-template-columns: repeat(1, 1fr); !* 1 affiche par ligne *!*/
+/*    }*/
+/*}*/
+
+/* Card Styling */
+.card-size {
+    width: 252px; /* Largeur fixe */
+    height: 400px; /* Hauteur fixe */
+}
+
+
+/* Boutons Généraux */
+button:hover {
+    scale: 1.1;
+    transition: scale 0.1s ease-in-out;
+}
