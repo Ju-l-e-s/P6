@@ -1,22 +1,30 @@
 import { Fetch, category_url, base_url } from './api.js';
 import { attachModalListener } from './modal.js';
 
-const maxFilms = 6;
+// const maxFilms = 6;
+const getMaxFilms = () => {
+  if (window.innerWidth >= 992) {
+    return 6; // Desktop
+  } else if (window.innerWidth >= 768) {
+    return 4; // Tablet
+  } else {
+    return 2; // Mobile
+  }
+};
 
-/**
- * Retrieves the list of movies from the given URL.
- * @param {string} url - The API URL.
- * @returns {Array} - List of retrieved movies.
- */
+// Initialisation
+let maxFilms = getMaxFilms();
+
+window.addEventListener('resize', () => {
+  maxFilms = getMaxFilms();
+});
+
 export const movieList = async (url) => {
   const films = await Fetch(url + `&page_size=${maxFilms}`);
   return films?.results || [];
 };
 
-/**
- * Dynamically updates the displayed movies based on the screen size.
- * @param {HTMLElement} container - The container holding the movies.
- */
+
 const updateVisibleMovies = (container) => {
   const allMovies = container.querySelectorAll('.movie-item');
   let defaultCount;
@@ -40,11 +48,7 @@ const updateVisibleMovies = (container) => {
   });
 };
 
-/**
- * Dynamically displays movies in a given HTML section with a responsive design.
- * @param {string} url - The API URL to fetch movies.
- * @param {HTMLElement} section - The HTML section to display movies.
- */
+
 export const appendMovies = async (url, section) => {
   const movies = await movieList(url);
   let container = section.querySelector('.movie-container');
@@ -128,9 +132,7 @@ export const appendMovies = async (url, section) => {
   window.addEventListener('resize', () => updateVisibleMovies(container));
 };
 
-/**
- * Handles dynamic category selection by the user.
- */
+
 export const user_choice = () => {
   document.querySelectorAll('.category-select').forEach(select => {
     select.addEventListener('change', (event) => {

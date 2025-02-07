@@ -41,53 +41,24 @@
     height: auto; /* Ajuste la hauteur automatiquement */
     max-width: 252px; /* Largeur maximale définie */
 }
-/*.movie-container {*/
-
-/*}*/
-/*!* Container Styling *!*/
-/*.movie-container {*/
-/*    display: grid;*/
-/*    gap: 0.5rem; !* Espacement entre les affiches *!*/
-/*    justify-content: center; !* Centrer les affiches horizontalement *!*/
-/*    align-items: center; !* Centrer les affiches verticalement *!*/
-/*}*/
-
-/*!* Grid Layout Configuration *!*/
-/*@media (min-width: 992px) { !* Desktop *!*/
-/*    .movie-container {*/
-/*        grid-template-columns: repeat(3, 1fr); !* 3 affiches par ligne *!*/
-/*    }*/
-/*}*/
-
-/*@media (min-width: 768px) and (max-width: 991px) { !* Tablette *!*/
-/*    .movie-container {*/
-/*        grid-template-columns: repeat(2, 1fr); !* 2 affiches par ligne *!*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 767px) { !* Mobile *!*/
-/*    header{*/
-/*        display: flex;*/
-/*        justify-content: center;*/
-/*        align-items: center;*/
-/*    }*/
-/*    header h1 {*/
-/*        display: none;*/
-/*    }*/
-/*    .movie-container {*/
-/*        grid-template-columns: repeat(1, 1fr); !* 1 affiche par ligne *!*/
-/*    }*/
-/*}*/
-
 /* Card Styling */
 .card-size {
     width: 252px; /* Largeur fixe */
     height: 400px; /* Hauteur fixe */
 }
 
-
-/* Boutons Généraux */
+/* Globals buttons */
 button:hover {
     scale: 1.1;
     transition: scale 0.1s ease-in-out;
+}
+
+.max-width {
+    max-width: 960px;
+    margin: 0 auto; /* Centre l'élément */
+}
+@media (max-width: 674px) {
+    h1 {
+        display: none;
+    }
 }
